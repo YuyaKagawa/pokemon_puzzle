@@ -66,6 +66,7 @@ function get_csv(args) {
 
         request.onload = function () {
             result = split_csv(request.responseText);
+            console.log(`result = ${result}`);
             
             if (list==true){ // ポケモンのリストを読み込むとき
                 L = result.map(inner=>inner.slice());
