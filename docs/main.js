@@ -1,4 +1,5 @@
-$(document).ready(function(){
+// $(document).ready(function(){
+$(window).load(function(){
     // htmlが読み込めた後に実行
     // canvas_mainの黒枠だけ表示する
 
