@@ -62,11 +62,6 @@ function get_csv(args) {
         else if (str.split("\r").length>1){
             tmp = str.split("\r");
         }
-        // var tmp = str.split(str[65]);
-        // console.log(`str[30:65] = ${str.slice(30,65)}`);
-        // var tmp = str.split("\r\n");
-
-        // console.log(`tmp[0] = ${tmp[0]}`);
 
         for (var i=0;i<tmp.length;i++){
             result[i]=tmp[i].split(",");
@@ -83,25 +78,14 @@ function get_csv(args) {
         request.send(null);
 
         request.onload = function () {
-            console.log(`request = ${request}`);
-            console.log(`request.responseText = ${request.responseText}`);    
-
             result = split_csv(request.responseText);
-            console.log(`result1 = ${result}`);
-            console.log(`result.length = ${result.length}`);
-            
             
             if (list==true){ // ポケモンのリストを読み込むとき
                 L = result.map(inner=>inner.slice());
             }
             else{
-                // console.log(`result2 = ${result}`);
-
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
-                        // console.log(`result[${i}] = ${result[i]}`);
-                        // console.log(`result[${i}][${j}] = ${result[i][j]}`);
-
                         let c = result[i][j].charCodeAt(0);
     
                         if ([12449,12451,12453,12455,12457,12483,12515,12517,12519].indexOf(c)>=0){
