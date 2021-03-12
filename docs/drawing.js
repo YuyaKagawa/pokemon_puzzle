@@ -61,25 +61,28 @@ function get_csv(args) {
 
     return new Promise(function(resolve,reject){
         var request = new XMLHttpRequest();
-        console.log(`request = ${request}`);
+
 
         request.open("GET",fname_csv,true);
         request.send(null);
 
         request.onload = function () {
+            console.log(`request = ${request}`);
+            console.log(`request.responseText = ${request.responseText}`);    
+
             result = split_csv(request.responseText);
-            console.log(`result1 = ${result}`);
+            // console.log(`result1 = ${result}`);
             
             if (list==true){ // ポケモンのリストを読み込むとき
                 L = result.map(inner=>inner.slice());
             }
             else{
-                console.log(`result2 = ${result}`);
+                // console.log(`result2 = ${result}`);
 
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
                         // console.log(`result[${i}] = ${result[i]}`);
-                        console.log(`result[${i}][${j}] = ${result[i][j]}`);
+                        // console.log(`result[${i}][${j}] = ${result[i][j]}`);
 
                         let c = result[i][j].charCodeAt(0);
     
