@@ -32,6 +32,7 @@ function listup(){
     }
 
     l_p.innerHTML = text;
+    l_p.style.height = `${canvasm.height}px`;
 }
 
 function cb_pokemon_list(){
