@@ -61,6 +61,8 @@ function get_csv(args) {
 
     return new Promise(function(resolve,reject){
         var request = new XMLHttpRequest();
+        console.log(`request = ${request}`);
+
         request.open("GET",fname_csv,true);
         request.send(null);
 
@@ -76,7 +78,7 @@ function get_csv(args) {
 
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
-                        console.log(`result[${i}] = ${result[i]}`);
+                        // console.log(`result[${i}] = ${result[i]}`);
                         console.log(`result[${i}][${j}] = ${result[i][j]}`);
 
                         let c = result[i][j].charCodeAt(0);
