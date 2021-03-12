@@ -71,7 +71,9 @@ function get_csv(args) {
             console.log(`request.responseText = ${request.responseText}`);    
 
             result = split_csv(request.responseText);
-            // console.log(`result1 = ${result}`);
+            console.log(`result1 = ${result}`);
+            console.log(`result.length = ${result.length}`);
+            
             
             if (list==true){ // ポケモンのリストを読み込むとき
                 L = result.map(inner=>inner.slice());
