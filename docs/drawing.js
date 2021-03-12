@@ -50,9 +50,23 @@ function get_csv(args) {
     function split_csv(str){
         // csvの中身を読み込む関数
         var result = [];
-        var tmp = str.split("\r\n");
 
-        console.log(`tmp = ${tmp}`);
+        var tmp=null;
+
+        if (str.split("\r\n").length>1){
+            tmp = str.split("\r\n");
+        }
+        else if (str.split("\n").length>1){
+            tmp = str.split("\n");
+        }
+        else if (str.split("\r").length>1){
+            tmp = str.split("\r");
+        }
+        // var tmp = str.split(str[65]);
+        // console.log(`str[30:65] = ${str.slice(30,65)}`);
+        // var tmp = str.split("\r\n");
+
+        // console.log(`tmp[0] = ${tmp[0]}`);
 
         for (var i=0;i<tmp.length;i++){
             result[i]=tmp[i].split(",");
