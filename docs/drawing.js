@@ -52,6 +52,8 @@ function get_csv(args) {
         var result = [];
         var tmp = str.split("\r\n");
 
+        console.log(`tmp = ${tmp}`);
+
         for (var i=0;i<tmp.length;i++){
             result[i]=tmp[i].split(",");
         }
