@@ -20,7 +20,7 @@ function listup(){
 
     sort_pokemon_list(order="name"); // 名前順にソートしておく
 
-    let text = "ポケモン151匹<br>チェックリスト<br>五十音順<br>";
+    let text = "<p>ポケモン151匹<br>チェックリスト<br>五十音順<br></p>";
 
     for (let i=0;i<L.length;i++){
         const pid = String(L[i][5]).padStart(3,"0");
