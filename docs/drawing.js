@@ -66,12 +66,14 @@ function get_csv(args) {
 
         request.onload = function () {
             result = split_csv(request.responseText);
-            console.log(`result = ${result}`);
+            console.log(`result1 = ${result}`);
             
             if (list==true){ // ポケモンのリストを読み込むとき
                 L = result.map(inner=>inner.slice());
             }
             else{
+                console.log(`result2 = ${result}`);
+
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
                         let c = result[i][j].charCodeAt(0);
