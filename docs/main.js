@@ -19,6 +19,8 @@ $(document).ready(function(){
     sw = (cw-2*cmar) / snum; // 格子中の1マスの幅
     sh = (ch-2*cmar)/snum; // 格子中の1マスの高さ
     tb = document.getElementById("textbox"); // テキストボックスの要素を取得
+    tb.readOnly=true; // まず最初は編集不可能にしておく
+
     b_sr = document.getElementById("b_start_reset"); // スタート・リセットボタンの要素を取得
     b_sh_a = document.getElementById("b_show_hide_answer"); // 答えを表示/非表示ボタンの要素を取得
     b_j = document.getElementById("b_judge"); // 判定ボタンの要素を取得
