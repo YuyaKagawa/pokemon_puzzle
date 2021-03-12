@@ -76,6 +76,8 @@ function get_csv(args) {
 
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
+                        console.log(`result3 = ${result}`);
+
                         let c = result[i][j].charCodeAt(0);
     
                         if ([12449,12451,12453,12455,12457,12483,12515,12517,12519].indexOf(c)>=0){
