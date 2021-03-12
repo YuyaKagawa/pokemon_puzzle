@@ -77,7 +77,7 @@ function get_csv(args) {
                 for (let i=0;i<snum;i++){
                     for (let j=0;j<snum;j++){
                         console.log(`result3 = ${result}`);
-                        console.log(`result[i][j] = ${result[i][j]}`);
+                        console.log(`result[${i}][${j}] = ${result[i][j]}`);
 
                         let c = result[i][j].charCodeAt(0);
     
