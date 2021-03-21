@@ -6,6 +6,6 @@ defaults:
       path: ""
     values:
       image:
-        path: /img/logo.png
-        height: 118
-        width: 132
+        path: /img/preview_resized.jpg
+        height: 630
+        width: 1200
