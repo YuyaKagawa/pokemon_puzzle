@@ -6,6 +6,6 @@ defaults:
       path: ""
     values:
       image:
-        path: /img/preview_resized.jpg
+        path: /docs/img/preview_resized.jpg
         height: 630
         width: 1200
